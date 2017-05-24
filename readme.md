@@ -20,3 +20,13 @@ Linear/Slide Potentiometer Module|Coding
 Tilt Module|
 Touch Sensor Module|
 Relay Module|
+
+# Sample Code
+
+## ADC
+
+```csharp
+var adc = await LinkerMezzanineCard.GetAdcDevice();
+var value = adc.Read(0);
+Debug.WriteLine(value.ToString("f3"));
+```
