@@ -13,7 +13,7 @@ LinkerMezzanineCardNet is .NET class library for [Linker Mezzanine card](http://
 Module|Status
 -|-
 Button Module|
-5mm Red LED Module|
+5mm Red LED Module|Coding
 LDR Module|
 Thermal Module|
 Linear/Slide Potentiometer Module|Coding
@@ -29,4 +29,18 @@ Relay Module|
 var adc = await LinkerMezzanineCard.GetAdcDevice();
 var value = adc.Read(0);
 Debug.WriteLine(value.ToString("f3"));
+```
+
+## DIO
+
+```csharp
+var led = LinkerMezzanineCard.GetConnectorD1();
+led.Pin0.SetDriveMode(GpioPinDriveMode.Output);
+for(;;)
+{
+    led.Pin0.Write(GpioPinValue.High);
+    await Task.Delay(100);
+    led.Pin0.Write(GpioPinValue.Low);
+    await Task.Delay(400);
+}
 ```

@@ -19,5 +19,9 @@ namespace LinkerMezzanineCardNet
             return new AdcDevice(controller);
         }
 
+        public static ConnectorDIO GetConnectorD1()
+        {
+            return new ConnectorDIO(ConnectorPinName.D_A, ConnectorPinName.D_B);
+        }
     }
 }
