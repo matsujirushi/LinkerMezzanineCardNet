@@ -19,7 +19,7 @@ Thermal Module|
 Linear/Slide Potentiometer Module|Coding
 Tilt Module|
 Touch Sensor Module|
-Relay Module|
+Relay Module|Finish
 
 # Sample Code
 
@@ -35,6 +35,19 @@ for (;;)
     await Task.Delay(100);
     module.Led = false;
     await Task.Delay(400);
+}
+```
+
+### Linker Relay
+
+```csharp
+var module = new LinkerRelay(LinkerMezzanineCard.GetConnectorD1());
+for (;;)
+{
+    module.Relay = true;
+    await Task.Delay(1000);
+    module.Relay = false;
+    await Task.Delay(4000);
 }
 ```
 

@@ -112,6 +112,7 @@
     <Compile Include="ConnectorDIO.cs" />
     <Compile Include="LinkerMezzanineCard.cs" />
     <Compile Include="Modules\LinkerLED.cs" />
+    <Compile Include="Modules\LinkerRelay.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\LinkerMezzanineCardNet.rd.xml" />
   </ItemGroup>
