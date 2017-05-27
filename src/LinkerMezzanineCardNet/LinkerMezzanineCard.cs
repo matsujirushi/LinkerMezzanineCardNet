@@ -23,5 +23,20 @@ namespace LinkerMezzanineCardNet
         {
             return new ConnectorDIO(ConnectorPinName.D_A, ConnectorPinName.D_B);
         }
+
+        public static ConnectorDIO GetConnectorD2()
+        {
+            return new ConnectorDIO(ConnectorPinName.D_C, ConnectorPinName.D_D);
+        }
+
+        public static ConnectorDIO GetConnectorD3()
+        {
+            return new ConnectorDIO(ConnectorPinName.D_E, ConnectorPinName.D_J);
+        }
+
+        public static ConnectorDIO GetConnectorD4()
+        {
+            return new ConnectorDIO(ConnectorPinName.D_G, ConnectorPinName.D_H);
+        }
     }
 }
