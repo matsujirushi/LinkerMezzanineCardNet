@@ -35,12 +35,12 @@ Debug.WriteLine(value.ToString("f3"));
 
 ```csharp
 var led = LinkerMezzanineCard.GetConnectorD1();
-led.Pin0.SetDriveMode(GpioPinDriveMode.Output);
+led[0].SetDriveMode(GpioPinDriveMode.Output);
 for(;;)
 {
-    led.Pin0.Write(GpioPinValue.High);
+    led[0].Write(GpioPinValue.High);
     await Task.Delay(100);
-    led.Pin0.Write(GpioPinValue.Low);
+    led[0].Write(GpioPinValue.Low);
     await Task.Delay(400);
 }
 ```

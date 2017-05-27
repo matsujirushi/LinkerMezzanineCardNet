@@ -4,17 +4,22 @@ namespace LinkerMezzanineCardNet
 {
     public class ConnectorDIO
     {
-        private GpioPin _Pin0;
-        public GpioPin Pin0 { get { return _Pin0; } }
+        private GpioPin[] _Pins;
 
-        private GpioPin _Pin1;
-        public GpioPin Pin1 { get { return _Pin1; } }
+        public GpioPin this[int index]
+        {
+            get
+            {
+                return _Pins[index];
+            }
+        }
 
         internal ConnectorDIO(ConnectorPinName pin0, ConnectorPinName pin1)
         {
             var controller = GpioController.GetDefault();
-            _Pin0 = controller.OpenPin((int)pin0);
-            _Pin1 = controller.OpenPin((int)pin1);
+            _Pins = new GpioPin[2];
+            _Pins[0] = controller.OpenPin((int)pin0);
+            _Pins[1] = controller.OpenPin((int)pin1);
         }
     }
 }
