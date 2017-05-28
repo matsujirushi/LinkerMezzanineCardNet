@@ -86,14 +86,6 @@ for (;;)
 
 ## Basic
 
-## ADC
-
-```csharp
-var adc = await LinkerMezzanineCard.GetAdcDevice();
-var value = adc.Read(0);
-Debug.WriteLine(value.ToString("f3"));
-```
-
 ## DIO
 
 ```csharp
