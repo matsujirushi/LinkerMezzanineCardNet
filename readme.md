@@ -12,7 +12,7 @@ LinkerMezzanineCardNet is .NET class library for [Linker Mezzanine card](http://
 
 Module|Status
 -|-
-Button Module|
+Button Module|Finish
 5mm Red LED Module|Finish
 LDR Module|
 Thermal Module|
@@ -24,6 +24,17 @@ Relay Module|Finish
 # Sample Code
 
 ## Module
+
+### Linker Button
+
+```csharp
+var module = new LinkerButton(LinkerMezzanineCard.GetConnectorD2());
+for (;;)
+{
+    Debug.WriteLine(module.Button);
+    await Task.Delay(200);
+}
+```
 
 ### Linker LED
 
