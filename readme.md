@@ -18,7 +18,7 @@ LDR Module|
 Thermal Module|
 Linear/Slide Potentiometer Module|Coding
 Tilt Module|Finish
-Touch Sensor Module|
+Touch Sensor Module|Finish
 Relay Module|Finish
 
 # Sample Code
@@ -56,6 +56,17 @@ var module = new LinkerTilt(LinkerMezzanineCard.GetConnectorD2());
 for (;;)
 {
     Debug.WriteLine(module.Tilt);
+    await Task.Delay(200);
+}
+```
+
+### Linker Touch Sensor
+
+```csharp
+var module = new LinkerTouchSensor(LinkerMezzanineCard.GetConnectorD2());
+for (;;)
+{
+    Debug.WriteLine(module.Touch);
     await Task.Delay(200);
 }
 ```
