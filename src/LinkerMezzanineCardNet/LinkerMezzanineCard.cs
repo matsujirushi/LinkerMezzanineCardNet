@@ -13,12 +13,6 @@ namespace LinkerMezzanineCardNet
             return _SpiController ?? (_SpiController = await SpiController.GetDefaultAsync());
         }
 
-        public static async Task<AdcDevice> GetAdcDevice()
-        {
-            var controller = await GetSpiController();
-            return new AdcDevice(controller);
-        }
-
         public static ConnectorDIO GetConnectorD1()
         {
             return new ConnectorDIO(ConnectorPinName.D_A, ConnectorPinName.D_B);
