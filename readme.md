@@ -17,7 +17,7 @@ Button Module|Finish
 LDR Module|
 Thermal Module|
 Linear/Slide Potentiometer Module|Coding
-Tilt Module|
+Tilt Module|Finish
 Touch Sensor Module|
 Relay Module|Finish
 
@@ -46,6 +46,17 @@ for (;;)
     await Task.Delay(100);
     module.Led = false;
     await Task.Delay(400);
+}
+```
+
+### Linker Tilt
+
+```csharp
+var module = new LinkerTilt(LinkerMezzanineCard.GetConnectorD2());
+for (;;)
+{
+    Debug.WriteLine(module.Tilt);
+    await Task.Delay(200);
 }
 ```
 

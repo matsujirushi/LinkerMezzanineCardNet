@@ -114,6 +114,7 @@
     <Compile Include="Modules\LinkerButton.cs" />
     <Compile Include="Modules\LinkerLED.cs" />
     <Compile Include="Modules\LinkerRelay.cs" />
+    <Compile Include="Modules\LinkerTilt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\LinkerMezzanineCardNet.rd.xml" />
   </ItemGroup>
