@@ -32,5 +32,15 @@ namespace LinkerMezzanineCardNet
         {
             return new ConnectorDIO(ConnectorDIO.PinName.D_G, ConnectorDIO.PinName.D_H);
         }
+
+        public static ConnectorADC GetConnectorADC1()
+        {
+            return new ConnectorADC(ConnectorADC.PinName.A0, ConnectorADC.PinName.A1);
+        }
+
+        public static ConnectorADC GetConnectorADC2()
+        {
+            return new ConnectorADC(ConnectorADC.PinName.A2, ConnectorADC.PinName.A3);
+        }
     }
 }
