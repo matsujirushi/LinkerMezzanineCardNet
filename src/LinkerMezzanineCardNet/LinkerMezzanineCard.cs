@@ -6,31 +6,31 @@ namespace LinkerMezzanineCardNet
 {
     public static class LinkerMezzanineCard
     {
-        private static SpiController _SpiController = null;
+        private static AdcDevice _AdcDevice = null;
 
-        private static async Task<SpiController> GetSpiController()
+        internal static AdcDevice GetAdcDevice()
         {
-            return _SpiController ?? (_SpiController = await SpiController.GetDefaultAsync());
+            return _AdcDevice ?? (_AdcDevice = new AdcDevice());
         }
 
         public static ConnectorDIO GetConnectorD1()
         {
-            return new ConnectorDIO(ConnectorPinName.D_A, ConnectorPinName.D_B);
+            return new ConnectorDIO(ConnectorDIO.PinName.D_A, ConnectorDIO.PinName.D_B);
         }
 
         public static ConnectorDIO GetConnectorD2()
         {
-            return new ConnectorDIO(ConnectorPinName.D_C, ConnectorPinName.D_D);
+            return new ConnectorDIO(ConnectorDIO.PinName.D_C, ConnectorDIO.PinName.D_D);
         }
 
         public static ConnectorDIO GetConnectorD3()
         {
-            return new ConnectorDIO(ConnectorPinName.D_E, ConnectorPinName.D_J);
+            return new ConnectorDIO(ConnectorDIO.PinName.D_E, ConnectorDIO.PinName.D_J);
         }
 
         public static ConnectorDIO GetConnectorD4()
         {
-            return new ConnectorDIO(ConnectorPinName.D_G, ConnectorPinName.D_H);
+            return new ConnectorDIO(ConnectorDIO.PinName.D_G, ConnectorDIO.PinName.D_H);
         }
     }
 }

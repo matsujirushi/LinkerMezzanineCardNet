@@ -3,15 +3,19 @@ using Windows.Devices.Spi;
 
 namespace LinkerMezzanineCardNet
 {
-    public class AdcDevice : IDisposable
+    internal class AdcDevice : IDisposable
     {
         private SpiDevice _Device;
 
-        internal AdcDevice(SpiController controller)
+        public AdcDevice()
         {
+            var asyncOperation = SpiController.GetDefaultAsync();
+
             var settings = new SpiConnectionSettings(0);
             settings.ClockFrequency = 112500;
             settings.Mode = SpiMode.Mode0;
+
+            var controller = asyncOperation.GetResults();
 
             _Device = controller.GetDevice(settings);
         }

@@ -107,7 +107,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AdcDevice.cs" />
-    <Compile Include="ConnectorPinName.cs" />
     <Compile Include="DragonBoard\PinName.cs" />
     <Compile Include="ConnectorDIO.cs" />
     <Compile Include="LinkerMezzanineCard.cs" />
