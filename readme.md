@@ -99,3 +99,14 @@ for(;;)
     await Task.Delay(400);
 }
 ```
+
+## ADC
+
+```csharp
+var slider = LinkerMezzanineCard.GetConnectorADC1();
+for (;;)
+{
+    Debug.WriteLine(slider[0]);
+    await Task.Delay(200);
+}
+```
